@@ -4,8 +4,8 @@ plugins:
 - name: ImagePolicyWebhook
   configuration:
     imagePolicy:
-      kubeConfigFile: /etc/kubernetes/controlconf/webhook.kubeconfig
+      kubeConfigFile: /etc/kubernetes/controlconf/custom-webhook.kubeconfig
       allowTTL: 50
       denyTTL: 50
       retryBackoff: 500
-      defaultAllow: true
+      defaultAllow: false
