@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    test: startup-probe-immutable
+  name: startup-probe-immutable
+spec:
+  containers:
+  - name: startup-probe-immutable
+    image: nginx
+    startupProbe:
+      exec:
+        command:
+        - rm
+        - /bin/touch
+      initialDelaySeconds: 1
+      periodSeconds: 5
